@@ -2,48 +2,68 @@ package main
 
 import "fmt"
 
+func main() {
+	//var family = [3]string{"Terry", "Shin", "Minn"}
+	//var home = [...]int{1, 2, 3}
+	//school := [3]rune{'a', 'b', 'c'}
+	//var office [2]bool
+	//
+	//secFamily := family
+	//family[0] = "Shinn Thant Minn"
+	//
+	//secSchool := school[1:3]
+	//thirdSchool := school[:3]
+	//
+	//secHome := home[:]
+	//secHome[0] = 100
+	//secHome = append(secHome, 200)
+	//dummy := [3]string{}
+	//
+	//copy(dummy[:], family[:])
+	//
+	//matrix := [3][2]int{
+	//	{1, 2},
+	//	{3, 4},
+	//	{5, 6},
+	//}
+	//secMatrix := [...][2]int{
+	//	{1, 2},
+	//	{3, 4},
+	//	{5, 6},
+	//}
+	//
+	//fmt.Println(family, home, school, office)
+	//fmt.Println(secHome, secSchool, thirdSchool, secFamily, matrix)
+	//fmt.Println(secMatrix)
 
-func main(){
-	// Array တွေ က fixed တွေပါ
-	// nums := [4]int{1, 2, 3, 4}
-	// slice က flex ဖြစ်ပါတယ် Append တို့  Cap တို့ က Slice မှာရှိပါတယ်
-	nums := []int{2,3,4,5,6,6}
-	
-	strs := [3]string{"Terry","Pokemon","Leon"}
-	bools := [2]bool{true,false}
-	runes := [2]rune{'c','d'}
+	//b := []int{1, 2, 3, 4}
+	//
+	////b[4] = 5
+	//b = append(b, 5)
+	//
+	//c := []int{6, 7, 8}
+	//a := [2]int{9, 10}
+	//
+	//b = append(b, c...)
+	//b = append(b, a[:]...)
+	//
+	//fmt.Println("b is", b)
+	//fmt.Println("c is", c)
+	//fmt.Println("c is", a)
 
-	fmt.Println(nums)
-	fmt.Println(strs)
-	fmt.Println(bools)
-	fmt.Println(runes)
-	fmt.Printf("%c \n",runes)
-	// lens ဆိုတာ Array/Slice မှာ length ဘယ်လောက်ရှိလည်ဆိုကို ကြည့်တာပါ
-	fmt.Println("lens in array",len(nums),len(strs),len(bools),len(runes))
-	// caps ဆိုတာ ကတော့ array မှာ ဆို length ပါပဲ slice မှာ ဆို ရက် တော့ increse count ပါ ကြို defind လုပ်ထားလို့လည်းရပါတယ်
-	fmt.Println("caps in array",cap(nums),cap(strs),cap(bools),cap(runes))
+	//a := []int{}
+	//b := make([]int, 2, 5)
+	//
+	//fmt.Println("a is", a)
+	//fmt.Println("b is", b)
 
-	// Copy လုပ်တဲ့နည်းပါ
-	src := []int{1,2,3,4}
-	// Make ဆိုတာ slice ကို type ကြိုကြေညှားထားတဲ့ သဘောပါပဲ 
-	dis := make([]int,2)
+	a := []int{1, 2, 4}
+	c := []int{}
 
-	// copy ကတော့ slice မှာ copy ကူးတာ ပါ return value length ကိုရပါတယ် initialize လုပ်ပြီ သား dis ရယ် source
-	n := copy(dis,src);
-	fmt.Println(n,dis)
+	b := a[:0]
 
-	// slice မှာ ပဲသုံးလို့ရပါတယ် ထပ်ထည့်တာပါ
-	dis = append(dis,src...)
+	lener := copy(c, a)
 
-	fmt.Println(dis[0])
-
-
-	// array ကို copy method သုံးခြင်ရင် array ကို slice view ပြောင်းလို့ရပါတယ် arr1[:] ပါပဲ
-	// arr1 := [3]int{1, 2, 3}
-     // arr2 := [3]int{0, 0, 0}
-  
-     // n := copy(arr2[:], arr1[:]) // convert arrays to slices
-     // fmt.Println("Copied:", n)   // 3
-     // fmt.Println("arr2:", arr2)  // [1 2 3]
-	
+	fmt.Println("c is", c, "lener is", lener)
+	fmt.Println("b is", b)
 }

@@ -1,0 +1,70 @@
+//package main
+//
+//import "fmt"
+//
+//
+//func main(){
+//	// Array တွေ က fixed တွေပါ
+//	// nums := [4]int{1, 2, 3, 4}
+//	// slice က flex ဖြစ်ပါတယ် Append တို့  Cap တို့ က Slice မှာရှိပါတယ်
+//	nums := []int{2,3,4,5,6,6}
+//
+//	nums[0] = 10 // ပြောင်လည်းလို့ရပါတယ်
+//
+//	var test [3]int
+//	tester := [...]int{7,8,9} // length ကို auto detect လုပ်ပေးပါတယ်
+//	fmt.Println(tester)
+//
+//	fmt.Println(test)
+//
+//	strs := [3]string{"Terry","Pokemon","Leon"}
+//	bools := [2]bool{true,false}
+//	runes := [2]rune{'c','d'}
+//
+//	fmt.Println(nums)
+//	fmt.Println(strs)
+//	fmt.Println(bools)
+//	fmt.Println(runes)
+//	fmt.Printf("%c \n",runes)
+//	// lens ဆိုတာ Array/Slice မှာ length ဘယ်လောက်ရှိလည်ဆိုကို ကြည့်တာပါ
+//	fmt.Println("lens in array",len(nums),len(strs),len(bools),len(runes))
+//	// caps ဆိုတာ ကတော့ array မှာ ဆို length ပါပဲ slice မှာ ဆို ရက် တော့ increse count ပါ ကြို defind လုပ်ထားလို့လည်းရပါတယ်
+//	fmt.Println("caps in array",cap(nums),cap(strs),cap(bools),cap(runes))
+//
+//	// Copy လုပ်တဲ့နည်းပါ
+//	src := []int{1,2,3,4}
+//	// Make ဆိုတာ slice ကို type ကြိုကြေညှားထားတဲ့ သဘောပါပဲ
+//	dis := make([]int,2)
+//
+//	// copy ကတော့ slice မှာ copy ကူးတာ ပါ return value length ကိုရပါတယ် initialize လုပ်ပြီ သား dis ရယ် source
+//	n := copy(dis,src);
+//	fmt.Println(n,dis)
+//
+//	// slice မှာ ပဲသုံးလို့ရပါတယ် ထပ်ထည့်တာပါ
+//	dis = append(dis,src...)
+//
+//	fmt.Println(dis[0])
+//
+//
+//	// array ကို copy method သုံးခြင်ရင် array ကို slice view ပြောင်းလို့ရပါတယ် arr1[:] ပါပဲ
+//	// arr1 := [3]int{1, 2, 3}
+//     // arr2 := [3]int{0, 0, 0}
+//
+//     // n := copy(arr2[:], arr1[:]) // convert arrays to slices
+//     // fmt.Println("Copied:", n)   // 3
+//     // fmt.Println("arr2:", arr2)  // [1 2 3]
+//
+//
+//	//  front append
+//// 	s := []int{2, 3, 4}
+//// 	x := 1
+//// 	s = append([]int{x}, s...) // prepend
+//// 	fmt.Println(s) // [1 2 3 4]
+//
+//// copy from wanted part
+//// src := []int{9, 9}
+//// dst := []int{1, 2, 3, 4}
+//
+//// copy(dst[1:], src) // overwrite from index 1
+//// fmt.Println(dst)   // [1 9 9 4]
+//}
